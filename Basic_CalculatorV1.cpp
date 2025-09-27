@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int oper;
+    int oper, gcda, gcdb, gcd, gcdr, gcdx;
     float addsum, mulproduct, divq, subdifference, mulplicand, mulplier,
     minuend, subtrahend, dividend, diviso, addend1, addend2;
 
@@ -12,7 +12,8 @@ int main() {
     cout << "Enter [1] for addition\n";
     cout << "Enter [2] for subtraction\n";
     cout << "Enter [3] for multiplication\n";
-    cout << "Enter [4] for division\n\n";
+    cout << "Enter [4] for division\n";
+    cout << "Enter [5] for GCD\n\n";
     
     cout << "ENTER NUMBER: ";
     cin >> oper;
@@ -59,11 +60,22 @@ int main() {
         divq = dividend / diviso;
         cout << "Result: " << divq;
         break;
+    case 5: 
+        cout <<"Enter a: ";
+        cin >> gcda;
+        cout <<"Enter b: ";
+        cin >> gcdb;
+        
+        if (gcda > gcdb) {
+            while (gcdr != 0) {
+                gcdr = gcda % gcdb;
+                gcda = gcdb;
+                gcdb = gcdr;
+            }
+            cout << "The GCD is: " << gcda << "\n";  
+        } 
     default:
         cout <<"THANK YOU!";
     }
-
-        cout << "TEST";
-    
     return 0;
 }
