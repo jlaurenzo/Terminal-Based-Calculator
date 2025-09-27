@@ -62,6 +62,8 @@ int main() {
     default:
         cout <<"THANK YOU!";
     }
+
+        cout << "TEST";
     
     return 0;
 }
