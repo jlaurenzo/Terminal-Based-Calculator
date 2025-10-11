@@ -1,5 +1,32 @@
-Hello! 👋
+# 🧠 Dev Note
 
-This is my first personal project as a Computer Science student. While it may seem cliché, I chose to create a terminal-based calculator to apply what I’ve learned from my subjects — Computer Programming I and Introduction to Computing.
+Hey there! 👋  
 
-Beyond basic arithmetic and multiplicative operations, this calculator also integrates concepts from my math courses such as Number Theory, Linear Algebra, and MMW (Mathematics in the Modern World). Through this project, I aim to combine programming logic with mathematical problem-solving by implementing both fundamental and advanced algorithms.
+This is my **first ever personal project** as a Computer Science student. I decided to build a **terminal-based calculator**, a simple yet a huge leap for me to put into practice what I’ve learned in *Computer Programming I* and *Introduction to Computing*.  
+
+I also wanted to mix in some of the math concepts from my other courses like **Number Theory**, **Linear Algebra**, and **Mathematics in the Modern World**. This project is my way of connecting coding logic with real mathematical problem-solving.  
+
+---
+
+## ⚙️ Current Features
+
+### Basic Operations
+- Addition  
+- Subtraction  
+- Multiplication  
+- Division  
+
+### Advanced Operation
+- Greatest Common Divisor (GCD) — implemented using the **Euclidean Algorithm**
+
+---
+
+## 🚧 Work in Progress
+- Generate sequence formulas  
+- Implement check digit systems (ISBN, UPC, Bank Checks)  
+- Validate check digits using **Luhn’s Algorithm**  
+- Determine the day of the week using **Zeller’s Algorithm**
+
+---
+
+🗒️ *Still a work in progress, but I’m learning a lot while building this!*
