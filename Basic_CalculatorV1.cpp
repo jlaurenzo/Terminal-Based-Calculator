@@ -9,7 +9,7 @@ int main() {
     cout << "            TERMINAL BASED CALCULATOR\n";
     cout << "                     Welcome!\n";
     cout << "      This is a terminal based calculator.\n";
-    cout << "                   Version 1.0\n";
+    cout << "                   Version 1.2\n";
     cout <<"====================================================\n";
     cout << "Available Operations:\n";
     cout << "Enter [1] for addition\n";
