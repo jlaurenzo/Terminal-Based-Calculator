@@ -2,65 +2,71 @@
 using namespace std;
 
 int main() {
-    int oper, gcda, gcdb, gcd, gcdr, gcdx;
-    float addsum, mulproduct, divq, subdifference, mulplicand, mulplier,
-    minuend, subtrahend, dividend, diviso, addend1, addend2;
+    int oper, gcda, gcdb, gcdc, gcd, gcdr, gcdx, modr;
+    float addsum, mulproduct, divq, subdifference, num1, num2;
 
-    cout << "Welcome to my calculator\n";
-    cout << "You can divide, multiply, add, and subtract! \n\n";
-    cout << "What operation do you want to perform?\n";
+    cout <<"====================================================\n";
+    cout << "            TERMINAL BASED CALCULATOR\n";
+    cout << "                     Welcome!\n";
+    cout << "      This is a terminal based calculator.\n";
+    cout << "                   Version 1.0\n";
+    cout <<"====================================================\n";
+    cout << "Available Operations:\n";
     cout << "Enter [1] for addition\n";
     cout << "Enter [2] for subtraction\n";
     cout << "Enter [3] for multiplication\n";
     cout << "Enter [4] for division\n";
-    cout << "Enter [5] for GCD\n\n";
-    
-    cout << "ENTER NUMBER: ";
+    cout << "Enter [5] for GCD\n";
+    cout << "Enter [6] for a mod b = r\n";
+    cout <<"====================================================\n\n";
+    cout << "What do you and to perform?\n";
+    cout << "Enter a number: ";
     cin >> oper;
     
     switch (oper)
     {
     case 1:
         cout <<"You chose addition!\n";
-        cout <<"Enter Addend 1: ";
-        cin >> addend1;
-        cout <<"Enter Addend 2: ";
-        cin >> addend2;
+        cout <<"Enter Number 1: ";
+        cin >> num1;
+        cout <<"Enter Number 2: ";
+        cin >> num2;
 
-        addsum = addend1 + addend2;
+        addsum = num1 + num2;
         cout << "Result: " << addsum;
     break;
     case 2:
         cout <<"\nYou chose subtraction!\n";
-        cout <<"Enter minuend: ";
-        cin >> minuend;
-        cout <<"Enter subtrahend: ";
-        cin >> subtrahend;
+        cout <<"Enter Number 1: ";
+        cin >> num1;
+        cout <<"Enter Number 2: ";
+        cin >> num2;
 
-        subdifference = minuend - subtrahend;
+        subdifference = num1 - num2;
         cout << "Result: " << subdifference;
     break;
     case 3:
         cout <<"\nYou chose multiplication!\n";
-        cout <<"Enter Mulplicand: ";
-        cin >> mulplicand;
-        cout <<"Enter multiplier: ";
-        cin >> mulplier;
+        cout <<"Enter Number 1: ";
+        cin >> num1;
+        cout <<"Enter Nuber 2: ";
+        cin >> num2;
 
-        mulproduct = mulplicand * mulplier;
+        mulproduct = num1 * num2;
         cout << "Result: " << mulproduct;
     break;
     case 4:
         cout <<"\nYou chose division!\n";
-        cout <<"Enter dividend: ";
-        cin >> dividend;
-        cout <<"Enter divisor: ";
-        cin >> diviso;
+        cout <<"Enter Number 1: ";
+        cin >> num1;
+        cout <<"Enter Number 2: ";
+        cin >> num2;
 
-        divq = dividend / diviso;
+        divq = num1 / num2;
         cout << "Result: " << divq;
-        break;
+    break;
     case 5: 
+        cout <<"\nYou chose GCD!\n";
         cout <<"Enter a: ";
         cin >> gcda;
         cout <<"Enter b: ";
@@ -71,11 +77,36 @@ int main() {
                 gcdr = gcda % gcdb;
                 gcda = gcdb;
                 gcdb = gcdr;
-            }
-            cout << "The GCD is: " << gcda << "\n";  
-        } 
+            } 
+            cout << "The GCD is: " << gcda << "\n"; 
+        } else {
+            while (gcdr != 0) {
+                gcdr = gcdb % gcda;
+                gcdb = gcda;
+                gcda = gcdr;
+        }
+        cout << "The GCD is: " << gcdb << "\n"; 
+    }
+    break;
+    case 6: 
+        cout <<"\nYou chose a mod b!\n";
+        cout <<"Enter a: ";
+        cin >> gcda;
+        cout <<"Enter b: ";
+        cin >> gcdb;
+
+        if (gcda >= 0) {
+            gcdc = gcda/gcdb;
+            gcdr = gcda - (gcdb * gcdc);
+        } else {
+            gcdc = (gcda/gcdb)-1;
+            gcdr = gcda + ((gcdb * gcdc)*-1);
+        }
+        cout << gcda <<" mod "<< gcdb <<" is: "<<gcdr;
+    break;
     default:
         cout <<"THANK YOU!";
     }
+    cout <<"====================================================\n";
     return 0;
 }
