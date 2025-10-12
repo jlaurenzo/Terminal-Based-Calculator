@@ -16,7 +16,7 @@ I also wanted to mix in some of the math concepts from my other courses like **N
 - Multiplication  
 - Division  
 
-### Advanced Operation
+### Advanced Operations
 - Greatest Common Divisor (GCD) — implemented using the **Euclidean Algorithm**
 - Find r of a mod b
 - Modular Arithmetic **(Addition, Multiplication)**
