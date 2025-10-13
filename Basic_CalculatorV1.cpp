@@ -1,28 +1,39 @@
 #include <iostream>
+#include <cmath>
+#include <ctime>
+#include <string>
 using namespace std;
 
 int main() {
     int oper, gcda, gcdb, gcdc, gcd, gcdr, gcdx, modr;
     float result, num1, num2;
+    char more;
+    string type, day;
 
     cout <<"====================================================\n";
-    cout << "            TERMINAL BASED CALCULATOR\n";
-    cout << "                     Welcome!\n";
-    cout << "      This is a terminal based calculator.\n";
-    cout << "                   Version 2.0\n";
+    cout <<"            TERMINAL BASED CALCULATOR\n";
+    cout <<"                     Welcome!\n";
+    cout <<"      This is a terminal based calculator.\n";
+    cout <<"                   Version 2.0\n";
     cout <<"====================================================\n";
-    cout << "Available Operations:\n";
-    cout << "Enter [1] for addition\n";
-    cout << "Enter [2] for subtraction\n";
-    cout << "Enter [3] for multiplication\n";
-    cout << "Enter [4] for division\n";
-    cout << "Enter [5] for GCD\n";
-    cout << "Enter [6] for a mod b = r\n";
-    cout << "Enter [7] for Modular Addition\n";
-    cout << "Enter [8] for Modular Multiplication\n";   
+    cout <<"              ---BASIC OPERATIONS---\n";
+    cout <<" Enter [1] for addition\n";
+    cout <<" Enter [2] for subtraction\n";
+    cout <<" Enter [3] for multiplication\n";
+    cout <<" Enter [4] for division\n";
     cout <<"====================================================\n";
-    cout << "What do you and to perform?\n";
-    cout << "Enter a number: ";
+    cout <<"            ---ADVANCE OPERATIONS---\n";
+    cout <<" Enter [5] for GCD\n";
+    cout <<" Enter [6] for a mod b = r\n";
+    cout <<" Enter [7] for Modular Addition\n";
+    cout <<" Enter [8] for Modular Multiplication\n";
+    cout <<" Enter [9] Generate random number\n"; 
+    cout <<" Enter [10] Find Day of the Week\n"; 
+    cout <<"====================================================\n";
+    cout <<"          ---CONVERSION OPERATIONS---\n";
+    cout <<"====================================================\n";
+    cout <<" What do you and to perform?\n";
+    cout <<" Enter a number: ";
     cin >> oper;
     cout <<"====================================================\n";
     switch (oper)
@@ -195,6 +206,59 @@ int main() {
             result = gcdr;  
         }
         cout << result;
+    break;
+    case 9:
+        cout <<"You want to generate a random number!\n";
+        cout <<"What is the highest number you want to generate?: ";
+        cin >> gcda;
+    do {
+        result = (rand() % gcda)+1;
+        cout <<"The number is: "<< result <<"\n";
+        cout << "Do you want to generate again? (Y/N): ";
+        cin >> more;
+    } while (more != 'n');
+    break;
+    case 10: 
+    cout <<"You want to find the day of the week!\n";
+    cout <<"Enter original day (0-Sun, 1-Mon,...,6-Sat): ";
+    cin >> num1;
+    cout <<"Enter how many days you want to compute: ";
+    cin >> num2;
+    cout <<"Do you want to find the days before or after?\n";
+    cout <<"(B-Before/A-After): ";
+    cin >> more;
+    
+    gcdb = 7;
+    
+    if (more == 'B' || more =='b') {
+        gcda = num1 - num2;
+        gcdc = (gcda/gcdb)-1;
+        gcdr = gcda + ((gcdb * gcdc)*-1);
+        type = "Before";
+    }        
+    else if (more == 'A' || more =='a') {
+        gcda = num1 + num2;
+        gcdc = gcda/gcdb;
+        gcdr = gcda - (gcdb * gcdc);
+        type = "After";    
+    } else {
+        cout <<"Invaid!";
+    }
+
+    if (gcdr == 0) {
+        day = "Sunday";
+    } else if (gcdr==1){
+        day = "Monday";
+    } else if (gcdr==2){
+        day = "Tuesday";
+    } else if (gcdr==3){
+        day = "Wednesday";
+    } else if (gcdr==4){
+        day = "Thursday";
+    } else if (gcdr==5){
+        day = "Friday";
+    } else {day = "Saturday";}
+    cout << num2 << " Days " << type <<" "<< num1 <<" is: "<< gcdr << " or " << day<<"!";
     break;
     default:
     cout <<"\nTHANK YOU!";
