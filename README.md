@@ -20,6 +20,8 @@ I also wanted to mix in some of the math concepts from my other courses like **N
 - Greatest Common Divisor (GCD) — implemented using the **Euclidean Algorithm**
 - Find r of a mod b
 - Modular Arithmetic **(Addition, Multiplication)**
+- Generate random numbers
+- Find day of the week.
 
 ---
 
