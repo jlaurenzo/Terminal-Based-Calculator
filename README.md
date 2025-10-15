@@ -4,7 +4,7 @@ Hey there! 👋
 
 This is my **first ever personal project** as a Computer Science student. I decided to build a **terminal-based calculator**, a simple yet a huge leap for me to put into practice what I’ve learned in *Computer Programming I* and *Introduction to Computing*.  
 
-I also wanted to mix in some of the math concepts from my other courses like **Number Theory**, **Linear Algebra**, and **Mathematics in the Modern World**. This project is my way of connecting coding logic with real mathematical problem-solving.  
+I also wanted to mix in some of the math concepts from my other courses like **Number Theory**, **Linear Algebra**, and **Mathematics in the Modern World**. This project is my way of sharpening my algorithm making skill and connecting coding logic with real mathematical problem-solving.  
 
 ---
 
