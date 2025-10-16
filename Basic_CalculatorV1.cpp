@@ -31,6 +31,10 @@ int main() {
     cout <<" Enter [10] Find Day of the Week\n"; 
     cout <<"====================================================\n";
     cout <<"          ---CONVERSION OPERATIONS---\n";
+    cout <<" Enter [11] Celcius ---> Farenheit\n";
+    cout <<" Enter [12] Celcius ---> Kelvin\n";
+    cout <<" Enter [13] Farenheit ---> Celcius\n";
+    cout <<" Enter [14] Farenheit ---> Kelvin\n";
     cout <<"====================================================\n";
     cout <<" What do you and to perform?\n";
     cout <<" Enter a number: ";
@@ -48,6 +52,7 @@ int main() {
         result = num1 + num2;
         cout << "Result: " << result;
     break;
+    
     case 2:
         cout <<"You chose subtraction!\n";
         cout <<"Enter Number 1: ";
@@ -58,6 +63,7 @@ int main() {
         result = num1 - num2;
         cout << "Result: " << result;
     break;
+    
     case 3:
         cout <<"You chose multiplication!\n";
         cout <<"Enter Number 1: ";
@@ -68,6 +74,7 @@ int main() {
         result = num1 * num2;
         cout << "Result: " << result;
     break;
+    
     case 4:
         cout <<"You chose division!\n";
         cout <<"Enter Number 1: ";
@@ -78,6 +85,7 @@ int main() {
         result = num1 / num2;
         cout << "Result: " << result;
     break;
+    
     case 5: 
         cout <<"You chose GCD!\n";
         cout <<"Enter a: ";
@@ -101,6 +109,7 @@ int main() {
         cout << "The GCD is: " << gcdb; 
     }
     break;
+   
     case 6: 
         cout <<"You chose a mod b!\n";
         cout <<"Enter a: ";
@@ -117,6 +126,7 @@ int main() {
         }
         cout << gcda <<" mod "<< gcdb <<" is: "<<gcdr;
     break;
+  
     case 7:
         cout <<"You chose Modular Addition!\n";
         cout <<"Enter number 1: ";
@@ -162,6 +172,7 @@ int main() {
         }
         cout << result;
     break;
+    
     case 8:
         cout <<"You chose Modular Multiplication!\n";
         cout <<"Enter number 1: ";
@@ -207,6 +218,7 @@ int main() {
         }
         cout << result;
     break;
+   
     case 9:
         cout <<"You want to generate a random number!\n";
         cout <<"What is the highest number you want to generate?: ";
@@ -218,6 +230,7 @@ int main() {
         cin >> more;
     } while (more != 'n');
     break;
+    
     case 10: 
     cout <<"You want to find the day of the week!\n";
     cout <<"Enter original day (0-Sun, 1-Mon,...,6-Sat): ";
@@ -260,6 +273,37 @@ int main() {
     } else {day = "Saturday";}
     cout << num2 << " Days " << type <<" "<< num1 <<" is: "<< gcdr << " or " << day<<"!";
     break;
+   
+    case 11:
+    cout <<"Celcius ---> Farenheit\n";
+    cout <<"Enter degree in celcius: ";
+    cin >> num1;
+    num2 = (num1*1.8) + 32;
+    cout <<num1<< " C is equal to " << num2 <<" F";
+    break;
+
+    case 12:
+    cout <<"Celcius ---> Kelvin\n";
+    cout <<"Enter degree in celcius: ";
+    cin >> num1;
+    num2 = num1 + 273.15;
+    cout <<num1<< " C is equal to " << num2 <<" K";
+    break;
+    
+    case 13:
+    cout <<"Farenheit ---> Celcius\n";
+    cout <<"Enter degree in Farenheit: ";
+    cin >> num1;
+    num2 = (num1-32)*1.8;
+    cout <<num1<< " F is equal to " << num2 <<" C";
+    break;
+
+    case 14:
+    cout <<"Farenheit ---> Kelvin\n";
+    cout <<"Enter degree in Farenheit: ";
+    cin >> num1;
+    num2 = ((num1-32)*1.8)+ 273.15;
+    cout <<num1<< " F is equal to " << num2 <<" K";
     default:
     cout <<"\nTHANK YOU!";
     }
