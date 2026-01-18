@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    int oper, gcda, gcdb, gcdc, gcd, gcdr, gcdx, modr;
+    int oper, gcda, gcdb, gcdc, gcd, gcdr, gcdx, modr, nth;
     float result, num1, num2;
     char more;
     string type, day;
@@ -29,6 +29,7 @@ int main() {
     cout <<" Enter [8] for Modular Multiplication\n";
     cout <<" Enter [9] Generate random number\n"; 
     cout <<" Enter [10] Find Day of the Week\n"; 
+    cout <<" Enter [x ] Find the nth term in a sequence";
     cout <<"====================================================\n";
     cout <<"          ---CONVERSION OPERATIONS---\n";
     cout <<" Enter [11] Celcius ---> Farenheit\n";
@@ -304,6 +305,18 @@ int main() {
     cin >> num1;
     num2 = ((num1-32)*1.8)+ 273.15;
     cout <<num1<< " F is equal to " << num2 <<" K";
+    break;
+    
+    case 15:
+    cout <<"Finding the nth term of a sequence!";
+    cout <<"Enter first number: ";
+    cin >> num1;
+    cout <<"Enter common difference: ";
+    cin >> gcd;
+    cout <<"Enter nth term to find: "; 
+    cin >> nth;
+    result = num1 + (nth-gcd) * gcd;
+
     default:
     cout <<"\nTHANK YOU!";
     }
