@@ -1,4 +1,4 @@
-# 🧠 Dev Note
+# Dev Note
 
 Hey there! 👋  
 
@@ -8,7 +8,7 @@ I also wanted to mix in some of the math concepts from my other courses like **N
 
 ---
 
-## ⚙️ Current Features
+## Current Features
 
 ### Basic Operations
 - Addition  
@@ -25,7 +25,7 @@ I also wanted to mix in some of the math concepts from my other courses like **N
 
 ---
 
-## 🚧 Work in Progress
+## Work in Progress
 - Generate sequence formulas  
 - Implement check digit systems (ISBN, UPC, Bank Checks)  
 - Validate check digits using **Luhn’s Algorithm**  
@@ -33,4 +33,11 @@ I also wanted to mix in some of the math concepts from my other courses like **N
 
 ---
 
+## CREATOR
+
+**jlaurenzo**  
+🎓 Student | C++ Beginner  
+📚 CS @ TIP-QC  
+
+---
 🗒️ *Still a work in progress, but I’m learning a lot while building this!*
